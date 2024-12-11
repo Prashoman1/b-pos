@@ -28,6 +28,10 @@ const config = {
           DEFAULT: "hsl(144, 73%, 37%)", // Updated primary color
           foreground: "hsl(var(--primary-foreground))",
         },
+        success: {
+          DEFAULT: "hsl(240, 6%, 90%)",
+          foreground: "hsl(var(--success-foreground))",
+        },
         secondary: {
           DEFAULT: "hsl(213, 16%, 92%)",
           foreground: "hsl(var(--secondary-foreground))",
