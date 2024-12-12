@@ -3,6 +3,7 @@
 import { createContext, useContext } from "react";
 import useFullScreen from "./useFullScreen.hook";
 import useDarkMood from "./useDarkMood.hook";
+import useKeywordPress from "./useKeywordPress";
 
 const HomeContext = createContext(undefined);
 
@@ -11,15 +12,16 @@ export default function HomeContextProvider({ children }: any) {
   /* use this pattern  */
   const fullScreenState = useFullScreen();
   /***********************************/
-
   const darkMoodState = useDarkMood();
+  const keywordPressKey = useKeywordPress();
 
   return (
     <HomeContext.Provider
       value={
         {
           ...fullScreenState,
-          ...darkMoodState
+          ...darkMoodState,
+          ...keywordPressKey
         } as any
       }
     >
