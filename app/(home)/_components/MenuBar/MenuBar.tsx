@@ -1,6 +1,6 @@
 
 import Image from "next/image";
-import React from "react";
+import React, { Fragment } from "react";
 import { FiUser } from "react-icons/fi";
 import { FiUserPlus } from "react-icons/fi";
 import { LuUndo2 } from "react-icons/lu";
@@ -14,7 +14,7 @@ import { Input } from "@/components/ui/input";
 
 const MenuBar = () => {
   return (
-    <>
+    <Fragment>
       <div className="bg-white py-5 w-full  px-16">
         <div className="flex items-center gap-3">
           <div className="w-[38%] relative">
@@ -51,7 +51,7 @@ const MenuBar = () => {
           </div>
         </div>
       </div>
-    </>
+    </Fragment>
   );
 };
 
