@@ -1,6 +1,7 @@
 "use client";
 
-import NavBar from "../_components/shared/NavBar";
+
+import NavBar from "@/components/shared/NavBar";
 import MainSection from "./_components/MainSection/MainSection";
 import MenuBar from "./_components/MenuBar/MenuBar";
 

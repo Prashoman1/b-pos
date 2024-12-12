@@ -1,12 +1,15 @@
-import SunLogo from "@/app/_components/shared/SunLogo";
+
 import Image from "next/image";
 import React from "react";
 import { FiUser } from "react-icons/fi";
 import { FiUserPlus } from "react-icons/fi";
 import { LuUndo2 } from "react-icons/lu";
-import { IoIosExpand } from "react-icons/io";
+
 import { LuLayoutList } from "react-icons/lu";
 import { FiLogOut } from "react-icons/fi";
+
+import SunLogo from "@/components/shared/SunLogo";
+import ExpandIcon from "@/components/shared/ExpandIcon";
 
 const MenuBar = () => {
   return (
@@ -35,13 +38,11 @@ const MenuBar = () => {
           </div>
           <div className="w-[24%]">
             <div className="w-full flex items-center justify-between">
-              <SunLogo />
+              <SunLogo borderColor='border-success' bgColor='bg-secondary' textColor='text-black' />
               <span className="border-border p-3 rounded bg-primary">
                 <LuUndo2 className="text-white w-[24px] h-[24px]"/>
               </span>
-              <span className="border-border p-3 rounded bg-primary">
-                <IoIosExpand className="text-white w-[24px] h-[24px]"/>
-              </span>
+              <ExpandIcon borderColor="border-border" bgColor="bg-primary" textColor="text-white" />
               <span className="border-border p-3 rounded bg-primary">
                 <LuLayoutList className="text-white w-[24px] h-[24px]"/>
               </span>

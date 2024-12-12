@@ -1,12 +1,12 @@
+"use client";
 import Image from "next/image";
-import React from "react";
 import Logo from "@/public/assets/images/logo.png";
-
-import ExpandIcon from "@/public/assets/images/expand-icon.png";
 import User from "@/public/assets/images/user.png";
 import SunLogo from "./SunLogo";
+import ExpandIcon from "./ExpandIcon";
 
 const NavBar = () => {
+ 
   return (
     <>
       <header className="bg-white py-5 w-full shadow-xl px-16">
@@ -16,16 +16,8 @@ const NavBar = () => {
           </div>
           <div className="flex items-center gap-8">
             <div className="flex items-center gap-4">
-              <SunLogo/>
-              <span className="border-border p-3 rounded bg-secondary">
-                <Image
-                  className="w-[24px] h-[24px]"
-                  src={ExpandIcon}
-                  alt="logo"
-                  width={24}
-                  height={24}
-                />
-              </span>
+              <SunLogo borderColor='border-success' bgColor='bg-secondary' textColor='text-black'/>
+              <ExpandIcon borderColor='border-success' bgColor='bg-secondary' textColor='text-black' />
             </div>
             <details className="group dropdown relative">
               <summary className="btn flex items-center gap-4 rounded  border-none  px-4 py-1 cursor-pointer">
@@ -40,6 +32,7 @@ const NavBar = () => {
 
                 <div className="flex items-center gap-4">
                   <Image
+                  
                     className="w-[42px] h-[42px] rounded-full"
                     src={User}
                     alt="user"

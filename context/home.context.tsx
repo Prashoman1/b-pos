@@ -2,6 +2,7 @@
 
 import { createContext, useContext } from "react";
 import useFullScreen from "./useFullScreen.hook";
+import useDarkMood from "./useDarkMood.hook";
 
 const HomeContext = createContext(undefined);
 
@@ -11,11 +12,14 @@ export default function HomeContextProvider({ children }: any) {
   const fullScreenState = useFullScreen();
   /***********************************/
 
+  const darkMoodState = useDarkMood();
+
   return (
     <HomeContext.Provider
       value={
         {
           ...fullScreenState,
+          ...darkMoodState
         } as any
       }
     >

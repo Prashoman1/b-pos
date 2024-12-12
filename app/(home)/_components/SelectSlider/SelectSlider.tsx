@@ -5,6 +5,8 @@ import { useRef } from "react";
 import {  type Swiper as SwiperClass } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { FreeMode, Pagination } from "swiper/modules";
+import { HiOutlineArrowRight } from "react-icons/hi";
+import { HiOutlineArrowLeft } from "react-icons/hi2";
 
 const SelectSlider = () => {
   const swiperRef = useRef<SwiperClass | null>(null);
@@ -18,7 +20,10 @@ const SelectSlider = () => {
   };
   const sliderArray = [5, 10, 15, 20, 25, 30, 35, 40, 45, 50];
   return (
-    <div>
+    <div className="flex items-center gap-2">
+      <span onClick={handlePrev} className="cursor-pointer bg-primary p-2 rounded-full ">
+        <HiOutlineArrowLeft className="w-5 h-5 text-white"/>
+      </span>
       <Swiper
         onSwiper={(swiper) => (swiperRef.current = swiper)}
         loop={true}
@@ -26,7 +31,7 @@ const SelectSlider = () => {
         spaceBetween={10}
         freeMode={true}
         modules={[FreeMode, Pagination]}
-        className="mySwiper"
+        className="mySwiper flex items-center justify-between gap-3"
         breakpoints={{
           // When the viewport is 640px or larger
           640: {
@@ -40,7 +45,7 @@ const SelectSlider = () => {
           },
           // When the viewport is 1024px or larger
           1024: {
-            slidesPerView: 4,
+            slidesPerView: 3,
             spaceBetween: 30,
           },
         }}
@@ -55,6 +60,9 @@ const SelectSlider = () => {
           </SwiperSlide>
         ))}
       </Swiper>
+      <span onClick={handleNext} className="cursor-pointer bg-primary p-2 rounded-full ">
+        <HiOutlineArrowRight className="w-5 h-5 text-white"/>
+      </span>
     </div>
   );
 };
